@@ -53,7 +53,16 @@
                     <ViewCell>
                         <ContentView HeightRequest="200" Margin="15, 10, 10, 10">
                             <Editor Text="Break eggs, mix in milk, pour mixture into skillet, put heat on, 
-                               constant vigilance while cooking."/>
+                               constant vigilance while cooking.">
+                                <Editor.Triggers>
+                                    <Trigger TargetType="Editor" Property="IsFocused" Value="True">
+                                        <Setter Property="BackgroundColor" Value="#FFF9C4"></Setter>
+                                    </Trigger>
+                                    <Trigger TargetType="Editor" Property="IsFocused" Value="True">
+                                        <Setter Property="FontAttributes" Value="Bold"></Setter>
+                                    </Trigger>
+                                </Editor.Triggers>
+                            </Editor>
                         </ContentView>
                     </ViewCell>
                 </TableSection>
