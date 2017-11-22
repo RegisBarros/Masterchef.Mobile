@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Masterchef.Mobile.App.Views.EditRecipePage">
+             xmlns:local="clr-namespace:Masterchef.Mobile.App.Behaviors"
+             x:Class="Masterchef.Mobile.App.Views.EditRecipePage"
+             Title="Masterchef">
     <ContentPage.Content>
         <TableView Intent="Form" HasUnevenRows="True">
             <TableView.Root>
@@ -9,7 +11,18 @@
                     <EntryCell Label="Recipe Name" Text="Scrambled" HorizontalTextAlignment="End"/>
                     <EntryCell Label="Prep Time" Text="5 mins" HorizontalTextAlignment="End"/>
                     <EntryCell Label="Cook Time" Text="2 mins" HorizontalTextAlignment="End"/>
-                    <EntryCell Label="Number of Servings" Text="2" HorizontalTextAlignment="End"/>
+                    <ViewCell>
+                        <ContentView>
+                            <StackLayout Orientation="Horizontal" Margin="15, 10, 10, 10">
+                                <Label Text="Number of Servings" VerticalOptions="Center"/>
+                                <Entry Text="2" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End">
+                                    <Entry.Behaviors>
+                                        <local:NumericEntryBehavior/>
+                                    </Entry.Behaviors>
+                                </Entry>
+                            </StackLayout>
+                        </ContentView>
+                    </ViewCell>
                     <SwitchCell Text="Make again?" On="True"></SwitchCell>
                 </TableSection>
                 <TableSection Title="Meal">

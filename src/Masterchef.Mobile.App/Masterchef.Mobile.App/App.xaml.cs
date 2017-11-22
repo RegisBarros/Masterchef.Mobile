@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿using Masterchef.Mobile.App.Views;
 using Xamarin.Forms;
 
 namespace Masterchef.Mobile.App
@@ -13,7 +9,7 @@ namespace Masterchef.Mobile.App
         {
             InitializeComponent();
 
-            MainPage = new Masterchef.Mobile.App.MainPage();
+            MainPage = new EditRecipePage();
         }
 
         protected override void OnStart()
