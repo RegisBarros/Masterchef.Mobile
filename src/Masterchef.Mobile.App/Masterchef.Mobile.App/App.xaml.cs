@@ -9,7 +9,7 @@ namespace Masterchef.Mobile.App
         {
             InitializeComponent();
 
-            MainPage = new EditRecipePage();
+            MainPage = new RecipeListPage();
         }
 
         protected override void OnStart()

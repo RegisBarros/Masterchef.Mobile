@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:Masterchef.Mobile.App.Models"
+             x:Class="Masterchef.Mobile.App.Views.RecipeListPage">
+    <ContentPage.Content>
+        <ListView ItemsSource="{x:Static model:RecipeData.AllRecipesGrouped}" 
+                  GroupShortNameBinding="{Binding ShortName}"
+                  IsGroupingEnabled="True">
+            <ListView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Title}" TextColor="Red" />
+                    
+                </DataTemplate>
+            </ListView.GroupHeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding RecipeName}" Detail="{Binding MealType}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
