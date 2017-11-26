@@ -19,6 +19,8 @@
         public string Ingredients { get; set; }
 
         public string Directions { get; set; }
+
+        public string ImageName { get; set; }
     }
 
     /** Using the two classes below to set the pickers off of
