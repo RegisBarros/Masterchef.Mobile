@@ -46,6 +46,13 @@
     <Compile Include="Models\RecipeData.cs" />
     <Compile Include="Models\RecipeGrouping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewCells\RecipeCell.xaml.cs">
+      <DependentUpon>RecipeCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTemplateSelectors\RecipeDataTemplateSelector.cs" />
+    <Compile Include="ViewCells\RecommendedRecipeCell.xaml.cs">
+      <DependentUpon>RecommendedRecipeCell.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\EditRecipePage.xaml.cs">
       <DependentUpon>EditRecipePage.xaml</DependentUpon>
     </Compile>
@@ -85,7 +92,12 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="ViewCells\RecipeCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\blueberry-muffins.jpg" />
     <EmbeddedResource Include="Images\burger.jpg" />
@@ -93,6 +105,13 @@
     <EmbeddedResource Include="Images\ham.jpg" />
     <EmbeddedResource Include="Images\potato-salad.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ViewCells\RecommendedRecipeCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\..\packages\Xamarin.Forms.2.4.0.280\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\..\..\packages\Xamarin.Forms.2.4.0.280\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

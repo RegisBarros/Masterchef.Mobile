@@ -16,7 +16,7 @@ namespace Masterchef.Mobile.App.Models
                 {
                     _allRecipes = new List<Recipe>()
                     {
-                        new Recipe {
+                       new Recipe {
                             RecipeName="Eggs Benedict",
                             CookTime="24 min",
                             PreparationTime="5 min",
@@ -29,7 +29,8 @@ namespace Masterchef.Mobile.App.Models
                                 "8 large eggs\nHollandaise Sauce" + Environment.NewLine +
                                 "1/2 pound (16 slices) Canadian bacon" + Environment.NewLine +
                                 "4 English muffins, split in half, toasted",
-                            ImageName = "eggs-benedict.jpg"
+                            ImageName = "eggs-benedict.jpg",
+                            IsRecommended = false
                         },
                         new Recipe {
                             RecipeName="Blueberry Muffins",
@@ -41,7 +42,8 @@ namespace Masterchef.Mobile.App.Models
                             Difficulty=Difficulty.Medium,
                             Directions="Preheat oven to 350 degrees.\n\nCombine dry ingredients and strain into a large bowl. Create a reservoir in the center. Combine liquid ingredients. Pour wet ingredients in the reservoir and gently fold ingredients together. Gently fold in the blueberries.\n\nPut 1/4 to 1/3 cup batter in each muffin cup.\n\n*Optional* sprinkle oats and sunflower seeds on top of batter and place in oven.\n\nAllow muffins to bake for 20-25 minutes. Remove from oven when muffin top appears golden and a toothpick put into muffin comes out clean.",
                             Ingredients="1 cup whole wheat white flour\n1 tbsp baking powder\n1 tbsp cinnamon\n1 1/2 cup milk\n2 beaten eggs\n1 stick of butter, melted\n1 cup fresh blueberries\n1 tsp vanilla extract\n12 paper muffin cups liners\nwhole oats and sunflower seeds to sprinkle (optional)",
-                            ImageName = "blueberry-muffins.jpg"
+                            ImageName = "blueberry-muffins.jpg",
+                            IsRecommended = true
                         },
                         new Recipe {
                             RecipeName="Burger",

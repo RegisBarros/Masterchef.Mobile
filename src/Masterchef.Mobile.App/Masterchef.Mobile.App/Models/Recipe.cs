@@ -21,6 +21,8 @@
         public string Directions { get; set; }
 
         public string ImageName { get; set; }
+
+        public bool IsRecommended { get; set; }
     }
 
     /** Using the two classes below to set the pickers off of
